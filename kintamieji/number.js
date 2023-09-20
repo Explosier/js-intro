@@ -34,4 +34,4 @@ const exp2 = 2 ** 2;
 
 console.log(exp, exp1, exp2);
 
-console.log(2 ^ 10);
+console.log(2 ^ 50);
