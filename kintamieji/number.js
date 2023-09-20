@@ -17,4 +17,21 @@ const x3 = 3;
 const x4 = 4;
 const x5 = 5;
 
-console.log(x5);
+//console.log(x5);
+
+const n1 = 7;
+const n2 = 5;
+
+const sum = n1+n2;
+console.log(sum);
+
+const complex = (2 + 2) * 2;
+console.log(complex);
+
+const exp = 2 + 2;
+const exp1 = 2 * 2;
+const exp2 = 2 ** 2;
+
+console.log(exp, exp1, exp2);
+
+console.log(2 ^ 10);
