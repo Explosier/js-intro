@@ -35,3 +35,19 @@ const exp2 = 2 ** 2;
 console.log(exp, exp1, exp2);
 
 console.log(2 ^ 50);
+
+const begalybe = Infinity;
+const minusBegalybe = -Infinity;
+
+const x = 5 / 0;
+console.log(x);
+
+// not-a-number = NaN
+
+const n = NaN;
+console.log(n, NaN);
+
+const liekana = 7 % 5;
+console.log(liekana);
+
+
