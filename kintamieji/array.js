@@ -18,7 +18,7 @@ console.log(students, "first student is", students[0]);
 console.log(students, "last student is", students[students.length - 1]);
 let averageGrade = 0;
 grades.forEach(element => {
-    averageGrade = averageGrade+element;
+    averageGrade += element;
 });
 console.log("The average of students grades is: ", averageGrade / grades.length);
 
