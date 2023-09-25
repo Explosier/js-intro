@@ -35,3 +35,10 @@ console.log("My visited places are: ", listVPlaces.slice(0,-2));
 
 // Masyvas vietovardziu.
 // Suformuojat sakiny kurio formatas yra: Mano aplankytos vietos: Vieta1, Viet2, Vieta3.
+
+console.clear();
+const colors = ["geltona", "zalia", "raudona"];
+
+colors[1] = "Žalia";
+
+console.log(colors);
