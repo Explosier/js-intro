@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "for": "nodemon ./ciklas/for.js",
     "if": "nodemon ./palyginimas/if.js",
     "function": "nodemon ./kintamieji/function.js",
     "object": "nodemon ./kintamieji/object.js",
