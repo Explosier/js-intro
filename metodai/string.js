@@ -55,3 +55,27 @@ console.clear();
 const r1 = 'Labas';
 const r2 = r1.replace('a', 'x'); // replaceAll keicia viska
 console.log(r1, r2);
+console.clear();
+
+const kopustas = 'kopustas';
+console.log(kopustas.slice(0, -2));
+
+console.clear();
+
+const pvz = 'Labas rytas suraitytas vistos koja parasytas';
+console.log(pvz.split(' '));
+
+console.clear();
+
+console.log('Labas'.startsWith('L'));
+console.log('Labas'.endsWith('s'));
+
+console.clear();
+
+const tarpai = '          labas   rytas          ';
+const beTarpu = tarpai.trim(); // trimStart ir trimEnd
+console.log(`"${tarpai}"`);
+console.log(`"${beTarpu}"`);
+
+console.clear();
+
