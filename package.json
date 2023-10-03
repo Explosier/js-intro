@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "uzd:tarpai": "nodemon ./uzdaviniai/tarpai.js",
     "method:string": "nodemon ./metodai/string.js",
     "method:number": "nodemon ./metodai/number.js",
     "for": "nodemon ./ciklas/for.js",
