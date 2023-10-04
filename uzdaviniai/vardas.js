@@ -25,19 +25,36 @@ function arVardas(tekstas){
 
 // Namu darbai
 function arVardas2(tekstas){
-    if(tekstas[0] !== tekstas[0].toUpperCase()){
+    const minLength = 2;
+    const maxLength = 20;
+    //const leistiniSimboliai = 'AaĄąBbCcČčDdEeĘęĖėFfGgHhIiĮįYyJjKkLlMmNnOoPpRrSsŠšTtUuŲųŪūVvZzŽžXx';
+    const leistiniSimboliai = 'aąbcčdeęėfghiįyjklmnoprsštuųūvzžx';
+
+    if(typeof tekstas !== 'string'){
+        return `Klaida: "${tekstas}" yra netinkamas duomenu tipas, privalo buti tekstas..`;
+    }
+
+    const pirmaRaide = tekstas[0];
+    const likusiosRaides = tekstas.slice(1);
+
+    if(pirmaRaide !== pirmaRaide.toUpperCase()){
         return `Klaida: "${tekstas}" vardas turi prasideti is didziosios raides..`;
     }
-    if(tekstas.slice(1) !== tekstas.slice(1).toLowerCase()){
+    if(likusiosRaides !== likusiosRaides.toLowerCase()){
         return `Klaida: "${tekstas}" vardas negali tureti daugiau didziuju raidziu negu pirmoji didzioji raide..`;
     }
     if(tekstas.split(' ').length > 1) {
         return  `Klaida: "${tekstas}" varde negali buti tarpu..`;
     }
-    const leistiniSimboliai = 'AaĄąBbCcČčDdEeĘęĖėFfGgHhIiĮįYyJjKkLlMmNnOoPpRrSsŠšTtUuŲųŪūVvZzŽž';
+    if(tekstas.length < minLength) {
+        return  `Klaida: "${tekstas}" vardas turi buti ilgesnis negu ${minLength} simboliai..`;
+    }
+    if(tekstas.length > maxLength) {
+        return  `Klaida: "${tekstas}" vardas negali buti ilgesnis negu ${maxLength} simboliu..`;
+    }
     for(let i=0; i<tekstas.length; i++){
-        tekstoSimbolis = tekstas[i];
-        if(!leistiniSimboliai.includes(tekstoSimbolis)){
+        tekstoSimbolis = tekstas[i].toUpperCase();
+        if(!leistiniSimboliai.toUpperCase().includes(tekstoSimbolis)){
             return `Klaida: Varde "${tekstas}" yra neleistinas simbolis "${tekstoSimbolis}"`;
         }
     }
@@ -47,8 +64,23 @@ function arVardas2(tekstas){
 
 
 console.log(arVardas2('Labas kebabas'));
+console.log(arVardas2('Labaskebabasabaskebabbabas'));
 console.log(arVardas2('labas'));
 console.log(arVardas2('LabAS'));
 console.log(arVardas2('Laba8'));
 console.log(arVardas2('Laba"'));
 console.log(arVardas2('Labas'));
+console.log(arVardas2('L'));
+console.log(arVardas2('9abas'));
+console.log(arVardas2('!abas'));
+console.log(arVardas2());
+console.log(arVardas2(undefined));
+console.log(arVardas2(null));
+console.log(arVardas2(13));
+console.log(arVardas2(NaN));
+console.log(arVardas2(Infinity));
+console.log(arVardas2(true));
+console.log(arVardas2(false));
+console.log(arVardas2([]));
+console.log(arVardas2({}));
+console.log(arVardas2(arVardas2()));
