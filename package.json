@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "uzd:tips": "nodemon ./uzdaviniai/tips.js",
     "uzd:markasjonas": "nodemon ./uzdaviniai/markasjonas.js",
     "uzd:pazymiai": "nodemon ./uzdaviniai/pazymiai.js",
     "uzd:tarpai": "nodemon ./uzdaviniai/tarpai.js",
