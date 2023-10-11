@@ -5,4 +5,6 @@ function tip(money){
     return `Sąskaita buvo ${money}, arbatpinigiai ${tip}, o bendra vertė ${money+tip}`;
 }
 
-console.log(tip(1000));
+console.log(tip(275));
+console.log(tip(40));
+console.log(tip(430));
