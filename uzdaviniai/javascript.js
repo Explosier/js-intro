@@ -29,14 +29,14 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const g = '\x1b[32m'; // Green
 const r = '\x1b[31m'; // Red
-const w = '\x1b[0m'; // White
+const g = '\x1b[32m'; // Green
 const b = '\x1b[34m'; // Blue
+const w = '\x1b[0m'; // White
 
 // 1 Užduotis:
 console.log(`${g} 1 Užduotis: ${w}`);
-console.log(`-----------------------------------------`);
+console.log(`${b}-----------------------------------------${w}`);
 
 const actorName1 = "Johnny Depp";
 const actorName2 = "Tom Cruise";
@@ -44,8 +44,9 @@ const shorterName = actorName1.length < actorName2.length ? actorName1 : actorNa
 console.log(`The shorter name is ${r}${shorterName}${w} which is ${r}${shorterName.length-1}${w} characters long (excluding space).."`);
 
 // 2 Užduotis:
-console.log(`${g} \n2 Užduotis: ${w}`);
-console.log(`-----------------------------------------`);
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 2 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
 
 const name = "Tadas";
 const lastName = "Valantonis";
@@ -55,8 +56,9 @@ const age = currentYear - birthYear;
 console.log(`Aš esu ${r}${name} ${lastName}${w}. Man yra ${r}~ ${age}${w} metai(ų).`);
 
 // 2.1 Užduotis:
-console.log(`${g} \n2.1 Užduotis: ${w}`);
-console.log(`-----------------------------------------`);
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 2.1 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
 
 const birthDate = "1990-10-18";
 const currentDate = new Date();
@@ -64,8 +66,9 @@ const realAge = new Date(currentDate - new Date(birthDate)).getFullYear() - 1970
 console.log(`Aš esu ${r}${name} ${lastName}${w}. Man yra ${r}${realAge}${w} metai(ų).`);
 
 // 3 Užduotis:
-console.log(`${g} \n3 Užduotis: ${w}`);
-console.log(`-----------------------------------------`);
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 3 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
 
 const actorName = "Nicolas";
 const actorLastName = "Cage";
@@ -75,16 +78,18 @@ const lastLettersSUM = lastLettersAN + lastLettersALN;
 console.log(`Combined last 3 letters of actors ${r}${actorName} ${actorLastName}${w} name is ${r}${lastLettersSUM}${w}`);
 
 // 4 Užduotis:
-console.log(`${g} \n4 Užduotis: ${w}`);
-console.log(`-----------------------------------------`);
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 4 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
 
 const string = "Once upon a time in hollywood";
 const stringNoO = string.replaceAll("O",`${r}*${w}`).replaceAll("o", `${r}*${w}`);
 console.log(stringNoO);
 
 // 5 Užduotis:
-console.log(`${g} \n5 Užduotis: ${w}`);
-console.log(`-----------------------------------------`);
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 5 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
 
 const n1 = rand(0, 2);
 const n2 = rand(0, 2);
@@ -100,5 +105,55 @@ const countN2 = allNumArr.filter(n => n===2).length;
 console.log(`Random numbers: ${r}${allNumArr}${w}\nCount of the random numbers:\n0:${r}${countN0}${w}\n1:${r}${countN1}${w}\n2:${r}${countN2}${w}`);
 
 // 6 Užduotis:
-console.log(`${g} \n6 Užduotis: ${w}`);
-console.log(`-----------------------------------------`);
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 6 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
+
+const num1 = rand(0, 4);
+const num2 = rand(0, 4);
+const div = num1 > num2 ? num1 / num2 : num2 / num1;
+
+console.log(`Random numbers: ${r}${num1},${num2}${w}\nDivided: ${r}${div.toFixed(2)}${w}`);
+
+// 7 Užduotis:
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 7 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
+
+const number1 = rand(0, 25);
+const number2 = rand(0, 25);
+const number3 = rand(0, 25);
+let middle = null;
+
+if(number1 > number2 && number1 < number3 || number1 < number2 && number1 > number3){
+    middle = number1;
+} else
+if(number2 > number3 && number2 < number1 || number2 < number3 && number2 > number1){
+    middle = number2;
+} else
+if(number3 > number1 && number3 < number2 || number3 < number1 && number3 > number2){
+    middle = number3;
+} else {
+    middle = "Two or more numbers are EQUAL!";
+}
+
+console.log(`Random numbers: ${r}${number1},${number2},${number3}${w}\nMiddle number: ${r}${middle}${w}`);
+
+// 8 Užduotis:
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 8 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
+
+const firstLettersSUM = actorName[0] + actorLastName[0];
+console.log(`Combined first letters of actors ${r}${actorName} ${actorLastName}${w} name is ${r}${firstLettersSUM}${w}`);
+
+// 9 Užduotis:
+console.log(`${b}-----------------------------------------${w}`);
+console.log(`${g} 9 Užduotis: ${w}`);
+console.log(`${b}-----------------------------------------${w}`);
+
+const abc = "abcdefghijklmnopqrstuvwxyz";
+const randomAbc = abc[rand(0, abc.length-1)]+abc[rand(0, abc.length-1)]+abc[rand(0, abc.length-1)];
+
+console.log(`3 random letters: ${r}${randomAbc}${w}`);
+console.log(`${b}-----------------------------------------${w}`);
